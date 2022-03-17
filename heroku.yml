@@ -1,0 +1,22 @@
+# Exemplo para a construção de imagens Docker
+
+# setup:
+#   addons:
+#     - plan: heroku-postegresql
+#     as: DATABASE
+# build:
+#   docker:
+#     web: Dockerfile
+#     worker: worker/Dockerfile
+# realease:
+#   command:
+#     - ./deployment-tasks.sh
+#   image: worker
+# run:
+#   web: node index.js
+
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: index.js
